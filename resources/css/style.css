@@ -35,14 +35,6 @@ body {
 
 /* Header */
 
-header {
-  position: fixed;
-  width: 100%;
-  border-bottom: solid 1px #c6c1c1;
-  background-color: white;
-
-}
-
 header .content {
   display: flex;
   align-items: center;
@@ -74,16 +66,6 @@ header .icon {
 }
 
 /* Sign Up Section */
-
-#sign-up-section {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../images/banner-landingpage.jpg");
-  background-size: cover;
-  background-position: right;
-}
 
 #sign-up-cta {
   padding: 0 5rem 2.5rem 5rem;
@@ -130,25 +112,9 @@ header .icon {
 /* Features Section */
 
 #features-section {
-  display: flex;
-  justify-content: space-between;
   padding: 4rem 5%;
   background-color: #f3f3f3;
   margin: 0;
-}
-
-.feature h2 {
-  padding-bottom: .5rem;
-  font-size: 2.25rem;
-  font-weight: bold;
-  color: #4a4a4a;
-}
-
-.feature h3 {
-  font-size: 1rem;
-  line-height: 1.2;
-  font-weight: 300;
-  color: #4a4a4a;
 }
 
 .feature .content {
@@ -230,7 +196,21 @@ footer .copyright {
 
 /* Media Queries - Mobile */
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
+
+  #sign-up-section {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/banner-landingpage.jpg");
+    background-size: cover;
+    background-position: right;
+  }
+
+  #quotes-section {
+    background-color: white;
+  }
 
   #quotes-section content {
     padding: 1.875rem .625rem;
@@ -252,11 +232,12 @@ footer .copyright {
   }
 
   #filters-section .content {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
   }
 
   #filters-section .content h2 {
-    padding-bottom: .625rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     font-size: 1.125rem;
     line-height: 1.3;
     font-weight: normal;
@@ -295,7 +276,6 @@ footer .copyright {
     top: 1.5rem;
     background-color: transparent;
     border: none;
-
   }
 
   #sign-up-cta .content {
@@ -314,7 +294,15 @@ footer .copyright {
     font-size: 2.25rem;
   }
 
-  header .desktop {
+  header {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+  }
+
+  header .desktop,
+  header .tablet {
     display: none;
   }
 
@@ -389,57 +377,452 @@ footer .copyright {
    text-align: center;
    margin-bottom: 20px;
    width: 90%;
- }
+  }
 
- .content h2 {
-   font-size: 18px;
- }
+  .content h2 {
+    font-size: 18px;
+  }
 
- .content h3 {
+  .content h3 {
    font-size: 14px;
- }
+  }
 
- footer .content {
+  footer .content {
    font-size: 10px;
- }
+  }
+
+  .feature h2 {
+   padding-bottom: .5rem;
+   font-size: 18px;
+   font-weight: bold;
+  }
+
+  .feature h3 {
+   font-size: 14px;
+   line-height: 1.2;
+   font-weight: 300;
+  }
+
+  .feature h2,
+  .feature h3 {
+   color: #4a4a4a;
+   text-align: center;
+  }
+
+  .feature {
+   margin: 0;
+   padding: 1.25rem 1rem 0 1rem;
+  }
 
 }
 
 /* Media Query - Tablets */
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 601px) and (max-width: 960px) {
+
+  #sign-up-section {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/banner-landingpage.jpg");
+    background-size: cover;
+    background-position: right;
+  }
+
   footer .content {
     font-size: .625rem;
   }
 
-  .feature {
-    flex: 1;
-    padding: 2rem;
-    margin: 0px 1.25rem;
+  #features-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    flex-shrink: 0;
+    background-color: #f3f3f3;
+  }
+
+  #features-section .center {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 10px;
+    padding: 10px;
     background-color: white;
   }
 
-  .image-container img {
-    display: block;
+  #features-section .feature {
+    display: flex;
+    background-color: #f3f3f3;
+    margin: 0;
+  }
+
+  #features-section .image-container img {
+    margin: 10px;
     width: 90%;
-    height: 65%;
+    height: 100%;
+  }
+
+  #features-section .feature h2 {
+    padding-bottom: .5rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  #features-section .feature h3 {
+    font-size: 1rem;
+    line-height: 1.2;
+    min-width: 0;
+  }
+
+  #features-section .feature h2,
+  #features-section .feature h3 {
+    color: #4a4a4a;
+    text-align: left;
+  }
+
+  #filters-section {
+    padding: 1.5rem 0 0 0;
+  }
+
+  #filters-section .content {
+    margin-bottom: 1rem;
+  }
+
+  #filters-section .content h2 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    font-weight: bold;
+    padding: 30px 0 0 0;
+  }
+
+  #filters-section .content h3 {
+    font-size: .8rem;
+    line-height: 1.4;
+    padding: 0 0 30px 0;
+  }
+
+  #filters-section .images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
+  #filters-section .image-container img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  #sign-up-section {
+    height: 28rem;
+    width: 100%;
+  }
+
+  #sign-up-cta {
+    position: relative;
+    top: 3rem;
+    background-color: transparent;
+    border: none;
+  }
+
+  #sign-up-cta .content {
     margin: auto;
   }
+
+  #sign-up-cta .email {
+    display: none;
+  }
+
+  #sign-up-cta h1 {
+    font-size: 3.125rem;
+  }
+
+  #sign-up-cta h2 {
+    font-size: 2.25rem;
+  }
+
+  header {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1;
+  }
+
+  header .tablet {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  header .tablet ul {
+    text-align: center;
+  }
+
+  header .tablet-logo {
+    display: inline;
+    font-size: 1.5rem;
+    margin: 1em;
+  }
+
+  header .mobile,
+  header .desktop {
+    display: none;
+  }
+
+  header .content {
+    padding: 1.5rem 0;
+    margin: 0;
+  }
+
+  header .tablet .button {
+    padding: 3px 8px;
+    background-color: #9dc20b;
+    color: white;
+  }
+
+  .quote {
+   font-family: Palatino serif;
+   font-size: 28px;
+   line-height: 1.4;
+   font-style: italic;
+   text-align: left;
+   margin: auto;
+ }
+
+ #quotes-section .content {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin: auto;
+   padding-left: 10px;
+   padding-right: 10px;
+   background-color: white;
+ }
+
 }
 
 /* Media Query - Desktop */
 
-@media only screen and (min-width: 761px) and (max-width: 890px) {
+@media only screen and (min-width: 961px) {
 
-  .feature h2 {
-    font-size: 1.125rem;
-    line-height: 1.3;
-    font-weight: normal;
-  }
+    .feature h2 {
+      font-size: 1.125rem;
+      line-height: 1.3;
+      font-weight: normal;
+    }
 
-  .feature h3 {
-    font-size: .875rem;
-    line-height: 1.4;
-  }
+    .feature h3 {
+      font-size: .875rem;
+      line-height: 1.4;
+    }
+
+    #quotes-section {
+      background-color: white;
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+
+    #quotes-section .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 70px;
+    }
+
+    .quote {
+     font-family: Palatino serif;
+     font-size: 30px;
+     line-height: 1.1;
+     font-style: italic;
+     text-align: center;
+   }
+
+   .quote-citation {
+     margin: auto;
+   }
+
+   header {
+     position: fixed;
+     background-color: white;
+     width: 100%;
+     line-height: inherit;
+     z-index: 1;
+     font-size: 16px;
+   }
+
+   header .content {
+     padding-right: 30px;
+   }
+
+   header .logo {
+     font-size: 20px;
+     padding-left: 30px;
+   }
+
+   header .mobile,
+   header .tablet {
+     display: none;
+   }
+
+   #features-section {
+     display: flex;
+     justify-content: space-around;
+     padding: 10px;
+     flex-shrink: 0;
+     background-color: #f3f3f3;
+   }
+
+   #features-section .center {
+     display: flex;
+     flex-flow: column wrap;
+     justify-content: flex-start;
+     align-items: stretch;
+     margin: 64px 38px 46px 32px;
+     padding: 10px;
+     background-color: white;
+   }
+
+   #features-section .feature {
+     display: flex;
+     background-color: #f3f3f3;
+     margin: 0;
+   }
+
+   #features-section .image-container img {
+     margin: 10px;
+     width: 90%;
+     height: 65%;
+   }
+
+   #features-section .feature h2 {
+     padding-bottom: .5rem;
+     font-size: 2rem;
+     font-weight: bold;
+   }
+
+   #features-section .feature h3 {
+     font-size: 1rem;
+     line-height: 1.2;
+     min-width: 0;
+   }
+
+   #features-section .feature h2,
+   #features-section .feature h3 {
+     color: #4a4a4a;
+     text-align: center;
+   }
+
+   #filters-section {
+     padding: 1.5rem 0 0 0;
+   }
+
+   #filters-section .content {
+     margin-bottom: 1rem;
+   }
+
+   #filters-section .content h2 {
+     font-size: 36px;
+     line-height: 1.3;
+     font-weight: bold;
+     padding: 30px 0 0 0;
+   }
+
+   #filters-section .content h3 {
+     font-size: 16px;
+     line-height: 1.4;
+     padding: 0 0 30px 0;
+   }
+
+   #filters-section .images-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 20px;
+     padding-bottom: 60px;
+   }
+
+   #filters-section .image-container img {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+   }
+
+   #sign-up-section {
+     background-image: url("../images/banner-landingpage.jpg");
+     background-size: cover;
+     background-position: left;
+     height: 700px;
+   }
+
+   #sign-up-cta {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: solid 1px #979797;
+     border-radius: 4px;
+     background-color: #9dc20b;
+     width: 40%;
+     flex-grow: 0;
+     margin: 0 100px 0 170px;
+     position: relative;
+     top: 170px;
+   }
+
+   #sign-up-cta .email {
+     display: flex;
+     flex-flow: column wrap;
+     justify-content: flex-start;
+     align-items: center;
+   }
+
+   #sign-up-cta .content {
+     display: flex;
+     flex-flow: column wrap;
+     width: 25.625rem;
+     font-family: "Roboto", sans-serif;
+     font-size: 1.25rem;
+     line-height: 1.4;
+     color: white;
+   }
+
+   #sign-up-cta h1 {
+     font-size: 50px;
+   }
+
+   #sign-up-cta h2 {
+     font-size: 2.25rem;
+   }
+
+   #sign-up-cta span {
+     line-height: 1.4;
+     font-size: 20px;
+   }
+
+   #sign-up-cta span strong {
+     font-weight: bold;
+   }
+
+   #sign-up-cta .cursive {
+     font-family: "Damion", cursive;
+   }
+
+   #sign-up-cta .striking {
+     font-family: "Rubik", sans-serif;
+     padding-bottom: .75rem;
+   }
+
+   #sign-up-cta .button {
+     margin-top: 1.625rem;
+     padding: 1.25rem 7.25rem;
+   }
 
 }
